@@ -45,7 +45,7 @@
     [:div {:id "app"
            :data-state (str->base64 (pr-str @state))}
      (org/app state)]
-    [:script {:src "/js/google-analytics.js" :type "text/javascript"}]
+    [:script {:src (str js-root "js/google-analytics.js") :type "text/javascript"}]
     [:script {:src (str js-root "org.js") :type "text/javascript"}]]])
 
 (defn compile-sass
@@ -147,4 +147,3 @@
       (println "Invalid configuration: " (s/explain-str :org/config config))
       (System/exit 1))
     (generate-site! config)))
-

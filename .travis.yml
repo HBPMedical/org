@@ -2,13 +2,13 @@ language: clojure
 
 before_install:
  - gem install sass
- 
+
 branches:
   only:
    - master
-   
+
 jdk:
  - oraclejdk8
 
-after_success:
- - ./scripts/deploy.sh
+#after_success:
+# - ./scripts/deploy.sh
